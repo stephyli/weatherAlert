@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  weatherAlert
 //
-//  Created by Stephanie Gao on 3/6/16.
-//  Copyright © 2016 Stephanie Gao. All rights reserved.
+//  Created by Scott Kong on 3/6/16.
+//  Copyright © 2016 Scott Kong. All rights reserved.
 //
 
 import UIKit
@@ -48,27 +48,26 @@ class ViewController: UIViewController {
         labelLastName.center=CGPointMake(160, 300)
         view.addSubview(labelLastName)
         
-        labelLocation.text="City/Zip Code"
+        labelLocation.text="City/Zip Code Scott"
         labelLocation.textColor=UIColor.blackColor()
         labelLocation.textAlignment = NSTextAlignment.Center
         labelLocation.center=CGPointMake(160, 400)
         view.addSubview(labelLocation)
-
-
-
+        
+        
+        
     }
     
- 
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-
-
+    
+    
+    
 }
-
 
 
