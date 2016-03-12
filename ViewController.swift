@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         labelLastName.center=CGPointMake(160, 300)
         view.addSubview(labelLastName)
         
-        labelLocation.text="City/Zip Code ok"
+        labelLocation.text="City/Zip Code"
         labelLocation.textColor=UIColor.blackColor()
         labelLocation.textAlignment = NSTextAlignment.Center
         labelLocation.center=CGPointMake(160, 400)
