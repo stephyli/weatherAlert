@@ -1,9 +1,11 @@
 //
 //  ViewController.swift
-//  weatherAlert
+//  WeatherAlert
 //
-//  Created by Stephanie Gao on 3/6/16.
-//  Copyright © 2016 Stephanie Gao. All rights reserved.
+//  Created by Scott Kong on 3/20/16.
+//  Copyright (c) 2016 Scott Kong. All rights reserved.
+//
+
 //
 
 import UIKit
@@ -89,28 +91,58 @@ class ViewController: UIViewController {
         buttonSubmit.setTitle("Submit", forState: UIControlState.Normal)
         buttonSubmit.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         buttonSubmit.backgroundColor=UIColor.greenColor()
-        buttonSubmit.addTarget(self, action: "submitData", forControlEvents: UIControlEvents.TouchUpOutside)
+
+        buttonSubmit.addTarget(self, action: "submitData:", forControlEvents: UIControlEvents.TouchUpInside)
         buttonSubmit.setTitleColor(UIColor.grayColor(), forState: UIControlState.Highlighted)
-        buttonSubmit.setTitle("I am pressed", forState: UIControlState.Highlighted)
+        //buttonSubmit.setTitle("I am pressed", forState: UIControlState.Highlighted)
         buttonSubmit.center=CGPointMake(160, 550)
         view.addSubview(buttonSubmit)
         
-
-
-
+        
+        
+        
     }
     
- 
+    @IBAction func buttonTapped(sender: AnyObject) {
+        let alertController = UIAlertController(title: "iOScreator", message:
+            "Hello, world!", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func submitData(sender:UIButton)
+    {
+        var tag = sender.titleLabel?.textColor
+        println(tag)
+        validation()
+        //print(textBoxFirstName.text)
+        
+    }
+    
+    
+    func validation()
+    {
+       // if(textBoxPhoneNumber.text.isEmpty)=false && )
+        print(textBoxPhoneNumber.text.toInt())
+    }
+    
+    func submitDataOLD(sender:UIButton)
+    {
+        var refreshAlert = UIAlertController(title: "Log Out", message: "Are You Sure to Log Out ? ", preferredStyle: UIAlertControllerStyle.Alert)
 
+        
+        buttonSubmit.setTitle("I am pressed", forState: UIControlState.Highlighted)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-
-
+    
+    
+    
 }
-
 
 
