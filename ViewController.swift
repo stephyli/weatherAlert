@@ -1,3 +1,6 @@
+
+//
+
 //
 //  ViewController.swift
 //  WeatherAlert
@@ -91,7 +94,7 @@ class ViewController: UIViewController {
         buttonSubmit.setTitle("Submit", forState: UIControlState.Normal)
         buttonSubmit.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         buttonSubmit.backgroundColor=UIColor.greenColor()
-
+        
         buttonSubmit.addTarget(self, action: "submitData:", forControlEvents: UIControlEvents.TouchUpInside)
         buttonSubmit.setTitleColor(UIColor.grayColor(), forState: UIControlState.Highlighted)
         //buttonSubmit.setTitle("I am pressed", forState: UIControlState.Highlighted)
@@ -113,8 +116,8 @@ class ViewController: UIViewController {
     
     func submitData(sender:UIButton)
     {
-        var tag = sender.titleLabel?.textColor
-        println(tag)
+        let tag = sender.titleLabel?.textColor
+        print(tag)
         validation()
         //print(textBoxFirstName.text)
         
@@ -123,17 +126,12 @@ class ViewController: UIViewController {
     
     func validation()
     {
-       // if(textBoxPhoneNumber.text.isEmpty)=false && )
-        print(textBoxPhoneNumber.text.toInt())
+        // if(textBoxPhoneNumber.text.isEmpty)=false && )
+        print(NSNumberFormatter().numberFromString(textBoxPhoneNumber.text!))
+        let lenPhoneNumber : NSString = textBoxPhoneNumber.text!
+        print(lenPhoneNumber.length)
     }
     
-    func submitDataOLD(sender:UIButton)
-    {
-        var refreshAlert = UIAlertController(title: "Log Out", message: "Are You Sure to Log Out ? ", preferredStyle: UIAlertControllerStyle.Alert)
-
-        
-        buttonSubmit.setTitle("I am pressed", forState: UIControlState.Highlighted)
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -144,5 +142,6 @@ class ViewController: UIViewController {
     
     
 }
+
 
 
